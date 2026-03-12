@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)" />
+  </head>
+  <body>
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
+    <header>
+      <h1>My Portfolio</h1>
+      <p>Explore my work and experiments.</p>
+    </header>
+
+    <main>
+      <section id="quickqrforge" class="project">
+        <h2 id="qrf-heading">QuickQRForge - URL-to-QR-code generator (Python)</h2>
+        <!-- the heading above will be replaced with the live name & version from PyPI -->
+        <p>
+          A small but fully-featured Python application I built to make creating
+          QR codes from URLs painless.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Dual interfaces</strong> - either run it interactively with
+            a text-based UI (TUI) or invoke the command-line tool
+            (<code>qrgen</code>) from scripts.
+          </li>
+          <li>
+            <strong>Smart URL handling</strong> - normalises addresses (adds
+            <code>https://</code> when missing) and validates input, returning
+            meaningful exit codes for easy automation.
+          </li>
+          <li>
+            <strong>PNG output</strong> with configurable scale, suitable for
+            embedding in websites, documents or stickers.
+          </li>
+          <li>
+            <strong>Reusable library</strong> - exposes a simple public API
+            (<code>quickqrforge.generate_qr</code>) and the same functionality
+            can be driven via <code>subprocess</code> for existing codebases.
+          </li>
+          <li>
+            <strong>Quality-of-life features</strong> - packaged for PyPI,
+            installable with <code>pip install QuickQRForge</code>; includes
+            comprehensive tests, GitHub Actions CI workflow, and clean
+            MIT-licensed source.
+          </li>
+          <li>
+            <strong>Dev-friendly</strong> - supports editable installs,
+            documented usage/examples, and a minimal dependency list.
+          </li>
+        </ul>
+
+        <p>
+          This project demonstrates my ability to design a user-friendly CLI/TUI
+          tool, handle input validation, write automated tests, and manage
+          packaging/distribution for Python applications.
+        </p>
+        <p class="project-links">
+          <a href="https://github.com/Hibob555556/QRGenerator/" target="_blank" rel="noopener">View on GitHub</a> |
+          <a href="https://pypi.org/project/QuickQRForge/" target="_blank" rel="noopener">View on PyPI</a>
+        </p>
+      </section>
+
+      <!-- <section class="project">
+        <h2>Project Title 2</h2>
+        <p>Description of project 2. A brief overview of what this project is about and what technologies were used.</p>
+        <p><a href="#">View Project</a></p>
+    </section>
+
+    <section class="project">
+        <h2>Project Title 3</h2>
+        <p>Description of project 3. A brief overview of what this project is about and what technologies were used.</p>
+        <p><a href="#">View Project</a></p>
+    </section> -->
+
+      <!-- Add more project sections as needed -->
+    </main>
+
+    <footer>
+      <p>&copy;2026 | Cayden Lunt | Utah, United States</p>
+      <div class="social">
+        <a
+          href="https://www.linkedin.com/in/cayden-lunt-test-engineer"
+          target="_blank"
+          rel="noopener"
+          class="svg-icon"
+        >
+          <img src="images/linkedin.svg" alt="LinkedIn" class="icon" />
+          <span class="sr-only">LinkedIn</span>
+        </a>
+        <a href="https://github.com/Hibob555556" target="_blank" rel="noopener">
+          <img src="images/github.svg" alt="GitHub" class="icon" />
+          <span class="sr-only">GitHub</span>
+        </a>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

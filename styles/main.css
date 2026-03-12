@@ -1,0 +1,149 @@
+/* Mobile-first styles */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    margin-top: 0px; 
+    background-color: #000; 
+    color: #0f0; 
+    opacity: 0;
+    animation: fadeInPage 0.8s forwards;
+}
+
+header {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
+    border-bottom: 1px solid #0f0;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project {
+    background: #111; /* dark card */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,255,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: entry 0.6s forwards;
+}
+
+.project:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0,255,0,0.4);
+}
+
+/* loader overlay */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#loader .spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #0f0;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 15px 0 25px; /* extra top padding */
+    border-top: 1px solid #0f0;
+    font-size: 0.9rem;
+    color: #0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .social {
+    margin-top: 8px;
+    display: flex;
+    gap: 20px;
+}
+
+footer .social a {
+    color: #0f0;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+footer .social a:hover {
+    color: #afa;
+}
+
+footer .social img.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+    vertical-align: middle;
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(80deg);
+}
+
+/* svg icons color */
+footer .social .svg-icon img.icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+footer .social .svg-icon:hover img.icon {
+    color: #afa;
+}
+
+section {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* keyframes */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes fadeInPage {
+    to { opacity: 1; }
+}
+
+@keyframes entry {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.project {
+    background: #111; /* dark card */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,255,0,0.2);
+}
+a {
+    color: #0f0;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: #afa;
+}
+
+/* Larger screens moved to large.css */
